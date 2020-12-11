@@ -14,7 +14,7 @@ This chatbot contains 4 elements:
 
 
 Image 1:
-![loan_calculator_1](images/loan_calculator_1.png)
+![chatbot1](images/loan_calculator_1.png)
 
 Image 2:
 ![loan_calculator_2](images/loan_calculator_2.png)
