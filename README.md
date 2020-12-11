@@ -14,10 +14,10 @@ This chatbot contains 4 elements:
 
 
 Image 1:
-![chatbot1](images/chatbot1.png)
+![chatbot1](image/chatbot1.png)
 
 Image 2:
-![chatbot2](images/chatbot1.png)
+![chatbot2](image/chatbot1.png)
 
 
 
