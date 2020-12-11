@@ -13,10 +13,13 @@ This chatbot contains 4 elements:
 - Movie Infomation Scraper 
 
 
-#### Image 1:
+#### Demo 1:
 ![chatbot1](image/chatbot1.png)
 
-##### Image 2:
+##### Demo 2:
+![chatbot3](image/chatbot3.png)
+
+##### Demo 3:
 ![chatbot2](image/chatbot1.png)
 
 
