@@ -9,7 +9,6 @@ import dash_trich_components as dtc
 import pandas as pd
 
 import os
-os.chdir('C://Users/admin/Documents/Python2/project 3')
 from dash_player.DashPlayer import DashPlayer
 from dash_chatbots.chatbot_v4 import send_message, fuzzy_match, select_movie
 from dash_chatbots.knn_recommender_v1 import *
@@ -306,7 +305,7 @@ def update_bot_response(n_clicks, n_submit, user_input, chat_box, state):
         
         if response == "Hey! we found some possible matches in the database.Please choose one by specifying the order in the provided list: (Note: the order starts from 1)":
             all_options = fuzzy_match(user_input)
-            all_options_text = ['({0}) {1}'.format(i, title) for i, title in all_options]
+            all_options_text = ['{0}.{1}\n  '.format(i, title) for i, title in all_options]
             response_box1 = textbox(response, 'bot') 
             response_box2 = textbox(all_options_text, 'bot') 
             chat_box = chat_box + [response_box1, response_box2]

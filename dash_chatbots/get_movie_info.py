@@ -6,12 +6,12 @@ from codecs import encode, decode
 import ast
 from gensim.summarization.summarizer import summarize
 import os
-os.chdir('C://Users/admin/Documents/Python2/project 3/dash_chatbots')
+# os.chdir('C://Users/admin/Documents/Python2/project 3/dash_chatbots')
 #key = 'e4beb4c3'
 # key2 = 'd11685fd'
-movies_links = pd.read_csv('data/movies_links.csv', converters={'imdbId': lambda x: str(x)})
-ratings = pd.read_csv('data/rating_by_genre.csv')
-movies = pd.read_csv('data/movies.csv')
+movies_links = pd.read_csv('dash_chatbots/data/movies_links.csv', converters={'imdbId': lambda x: str(x)})
+ratings = pd.read_csv('dash_chatbots/data/rating_by_genre.csv')
+movies = pd.read_csv('dash_chatbots/data/movies.csv')
 
 
 def get_imdbid(movie):
