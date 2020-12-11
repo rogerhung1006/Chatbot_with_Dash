@@ -13,14 +13,12 @@ This chatbot contains 4 elements:
 - Movie Infomation Scraper 
 
 
-Image 1:
-![chatbot1](images/loan_calculator_1.png)
+#### Image 1:
+![chatbot1](image/chatbot1.png)
 
-Image 2:
-![loan_calculator_2](images/loan_calculator_2.png)
+##### Image 2:
+![chatbot2](image/chatbot1.png)
 
-Image 3:
-![loan_calculator_3](images/loan_calculator_3.png)
 
 
 # Get Started
