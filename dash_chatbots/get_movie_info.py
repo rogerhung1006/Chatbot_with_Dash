@@ -5,13 +5,17 @@ from youtube_search import YoutubeSearch
 from codecs import encode, decode
 import ast
 from gensim.summarization.summarizer import summarize
+from pathlib import Path
 import os
-# os.chdir('C://Users/admin/Documents/Python2/project 3/dash_chatbots')
+base_path = Path(__file__).parent
+os.chdir(base_path)
+
 #key = 'e4beb4c3'
 # key2 = 'd11685fd'
-movies_links = pd.read_csv('dash_chatbots/data/movies_links.csv', converters={'imdbId': lambda x: str(x)})
-ratings = pd.read_csv('dash_chatbots/data/rating_by_genre.csv')
-movies = pd.read_csv('dash_chatbots/data/movies.csv')
+movies_links = pd.read_csv('data/movies_links.csv', converters={'imdbId': lambda x: str(x)})
+ratings = pd.read_csv('data/rating_by_genre.csv')
+movies = pd.read_csv('data/movies.csv')
+
 
 
 def get_imdbid(movie):
@@ -66,15 +70,17 @@ def get_reviews(movie):
     URL = 'https://www.imdb.com/title/tt{}/reviews?ref_=tt_ql_3'.format(imdbId)
     page = requests.get(URL)
     soup = BeautifulSoup(page.content, 'html.parser')  
-    results = soup.find_all(class_='text show-more__control')
+    
+    results = soup.find_all(class_='review-container')
     reviews = []
     
     for i in results:
         try:
-            review = i.get_text()
-          #  review = decode(encode(reviews, 'latin-1', 'backslashreplace'), 'unicode-escape')
+            rating = i.find('span').find('span').get_text()
+            review = i.find(class_='text show-more__control').get_text()
             review = summarize(review, word_count=30)
-            reviews.append(review)
+            if len(review) != 0:
+                reviews.append((rating, review))
         except:
             continue
         
@@ -118,11 +124,9 @@ def get_top_rating_movies(genre, n=10):
 if __name__ == "__main__":
 
     movie = 'Lion King, The (1994)'
-    df = get_movie_info(movie, key='e4beb4c3')
-    print(get_genre(movie))
-    print(get_movie_posters([get_imdbid(movie)]))
+  #  df = get_movie_info(movie, key='e4beb4c3')
+  #  print(get_genre(movie))
+  #  print(get_movie_posters([get_imdbid(movie)]))
     #df.to_csv('C://Users/admin/Documents/Python2/project 3/monsters_inc_info.csv', index=False)    
     
-
-
-
+    print(get_reviews(movie))

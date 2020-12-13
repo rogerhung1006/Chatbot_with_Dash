@@ -24,6 +24,10 @@ import re
 import random
 import pandas as pd
 from fuzzywuzzy import fuzz
+from pathlib import Path
+import os
+base_path = Path(__file__).parent
+os.chdir(base_path)
 
 # Load and preprocess movie data 
 movies = pd.read_csv('data/movies.csv')
@@ -38,8 +42,9 @@ movies_links = movies.merge(links, on='movieId')
 movies_links.to_csv('data/movies_links_clean.csv', index=False)
 
 # Set inital variables
-user_name = 'Roger'
-name = 'Crystal_love_sleeping'
+
+user_name = '__USER__'
+name = 'Movie Recommendation Assistant'
 
 
 # Define defualt response
@@ -127,9 +132,9 @@ policy = {
     (INIT, "greetings"): (GREETING, f"Hi {user_name}! Would you like to tell me what specific movie you are interested in?"),
     (INIT, "goodbye"): (BYE, f"Bye {user_name}! Have a good day and enjoy your movie!"),
     (INIT, "none"): (INIT, f"Sorry {user_name}, I don't quite understand...Would you tell me what specific movie you are interested in again?"),
-    (INIT, "specify_movie"): (CONFIRM_MOVIE, f"Hey! we found some possible matches in the database.Please choose one by specifying the order in the provided list: (Note: the order starts from 1)"),
+    (INIT, "specify_movie"): (CONFIRM_MOVIE, f"Hey! we found some possible matches in the database."),
     (GREETING, "greetings"): (GREETING, f"Hi {user_name}! Would you like to tell me what specific movie you are interested in?"),
-    (GREETING, "specify_movie"): (CONFIRM_MOVIE, f"Hey! we found some possible matches in the database.Please choose one by specifying the order in the provided list: (Note: the order starts from 1)"),
+    (GREETING, "specify_movie"): (CONFIRM_MOVIE, f"Hey! we found some possible matches in the database."),
     (GREETING, "goodbye"): (BYE, f"Bye {user_name}! Have a good day and enjoy your movie!"),
     (GREETING, "none"): (CHOOSE_GENRE, "Sorry we can't find that movie in our database. Would you tell me what types of movie you usually watch?"),
     (CHOOSE_GENRE, "greetings"): (GREETING, f"Hi {user_name}! Would you like to tell me what specific movie you are interested in?"),
@@ -148,7 +153,7 @@ policy = {
     (MOVIE_RECOMMENDATION, "greetings"): (GREETING, f"Hi {user_name}! Would you like to tell me what specific movie you are interested in?"),
     (MOVIE_RECOMMENDATION, "goodbye"): (BYE, f"Bye {user_name}! Have a good day and enjoy your movie!"),
     (BYE, "greetings"): (GREETING, f"Hi {user_name}! Would you like to tell me what specific movie you are interested in?"),
-    (BYE, "specify_movie"): (CONFIRM_MOVIE, f"Hey! we found some possible matches in the database.Please choose one by specifying the order in the provided list: (Note: the order starts from 1)"),
+    (BYE, "specify_movie"): (CONFIRM_MOVIE, f"Hey! we found some possible matches in the database."),
 }
 
 # Create the list of testing messages

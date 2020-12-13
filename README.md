@@ -13,16 +13,20 @@ This chatbot application contains 4 elements:
 - Movie Infomation Scraper 
 
 
-#### Demo 1:
-![chatbot1](image/chatbot1.png)
+#### 1. Start the conversation:
+![chatbot1](image/start.png)
 
-##### Demo 2:
-![chatbot3](image/chatbot3.png)
+##### 2. See the selected movie overview: 
+![chatbot2](image/movie_info.png)
 
-##### Demo 3:
-![chatbot2](image/chatbot1.png)
+##### 3. Check other detailed information:
+![chatbot3](image/movie_review.png)
 
+##### 4. Get the recommendations based on the movie you like:
+![chatbot4](image/recommendation.png)
 
+##### 5. Support search by genre 
+![chatbot5](image/search_by_genre.png)
 
 # Get Started
 
