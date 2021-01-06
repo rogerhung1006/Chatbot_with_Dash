@@ -1,11 +1,12 @@
-# Chatbot with Dash
-### Topic: Virtual Movie Recommendation Assistant 
+# Virtual Movie Recommendation Assistant with Dash
+## Topic: chatbot
 ### Author: Roger Hung, Crystal lee
 <br >
 <strong>Chatbots are increasingly becoming common and a powerful tool to engage users by interacting with them in their natural language. Instead of searching all the movies information manually, which is not only time-consuming but lack of efficiency, we have deployed a simple chatbot by leveraging the power of dash that automates user conversations and helps the user find the movie of interest and what's more, provide recommendations based on the chosen movie. Although being a prototype, our chatbot is capable of looking up some detailed movie information and offer recommendations without any human assistance.</strong> <br >
 
 <br >
-This chatbot application contains 4 elements:
+
+**This chatbot application contains 4 elements:**
 
 - Dash Application 
 - Virtual Movie Recommendation Chatbot Assistant
@@ -13,27 +14,27 @@ This chatbot application contains 4 elements:
 - Movie Infomation Scraper 
 
 
-#### 1. Start the conversation:
-![chatbot1](image/start.png)
+### 1. Overview of the result:
+![chatbot1](images/demo0.png)
 
-##### 2. See the selected movie overview: 
-![chatbot2](image/movie_info.png)
+### 2. Basic conversation:
+![chatbot2](images/demo1.gif)
 
-##### 3. Check other detailed information:
-![chatbot3](image/movie_review.png)
+### 3. Detailed Movie information:
+![chatbot3](images/demo2.gif)
 
-##### 4. Get the recommendations based on the movie you like:
-![chatbot4](image/recommendation.png)
+### 4. Recommendations based on the movie of interest:
+![chatbot4](images/demo3.gif)
 
-##### 5. Support search by genre 
-![chatbot5](image/search_by_genre.png)
+### 5. Support search by genre(if not providing correct movie name) 
+![chatbot5](images/demo4.gif)
 
-# Get Started
+## Get Started
 
 Running the dash app on your local server
 
 ```cmd
-$python loan_app.py
+$python app.py
 ```
 
 
