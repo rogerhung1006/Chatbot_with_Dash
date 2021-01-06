@@ -33,7 +33,7 @@ This chatbot application contains 4 elements:
 Running the dash app on your local server
 
 ```cmd
-$python loan_app.py
+$python app.py
 ```
 
 
