@@ -14,19 +14,19 @@ This chatbot application contains 4 elements:
 
 
 #### 1. Start the conversation:
-![chatbot1](image/start.png)
+![chatbot1](images/demo0.png)
 
 ##### 2. See the selected movie overview: 
-![chatbot2](image/movie_info.png)
+![chatbot2](images/demo1.gif)
 
 ##### 3. Check other detailed information:
-![chatbot3](image/movie_review.png)
+![chatbot3](images/demo2.gif)
 
 ##### 4. Get the recommendations based on the movie you like:
-![chatbot4](image/recommendation.png)
+![chatbot4](images/demo3.gif)
 
 ##### 5. Support search by genre 
-![chatbot5](image/search_by_genre.png)
+![chatbot5](images/demo4.gif)
 
 # Get Started
 
